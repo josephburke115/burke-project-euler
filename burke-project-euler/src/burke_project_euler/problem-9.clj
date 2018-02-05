@@ -31,7 +31,7 @@
          :when (and c (< a b))]
           [a b c] ) )
 
-; Answer: return the element abc of alltriplets where the sum of the three terms
+; Answer: find the element abc of alltriplets where the sum of the three terms
 ; equals 1000 and return the product a * b * c
 (apply reduce *
  (for [abc alltriplets
