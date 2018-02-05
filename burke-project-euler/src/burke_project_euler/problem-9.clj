@@ -31,8 +31,9 @@
          :when (and c (< a b))]
           [a b c] ) )
 
-; Answer: return the element of alltriplets where the sum of the three terms
-; equals 1000
+; Answer: return the element abc of alltriplets where the sum of the three terms
+; equals 1000 and return the product a * b * c
+(apply reduce *
  (for [abc alltriplets
    :when  (= 1000 (reduce + abc))]
-        abc) ; expect [200 375 425]
+        abc)) ; expect 200 * 375 * 425 = 31875000
